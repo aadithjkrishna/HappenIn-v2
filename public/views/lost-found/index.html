@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found | College Event Management</title>
+    <link rel="stylesheet" href="/styles/lost-found.css">
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="container">
+        <h2>Lost & Found</h2>
+
+        <div class="toggle-buttons">
+            <button id="lostBtn" class="active">Lost Something</button>
+            <button id="foundBtn">Found Something</button>
+        </div>
+
+        <!-- LOST FORM -->
+        <form id="lostForm">
+            <input type="text" name="itemName" placeholder="Item Name" required>
+            <textarea name="description" placeholder="Description of the item" required></textarea>
+            <input type="text" name="eventName" placeholder="Event Name (where item was lost)" required>
+            <div class="file-upload">
+                <label for="itemPicture">Upload Item Picture:</label><br><br>
+                <input type="file" id="itemPicture" name="itemPicture" accept="image/*" required>
+            </div>
+            <button class="submit-btn" type="submit">Submit Lost Report</button>
+        </form>
+
+
+        <!-- FOUND FORM -->
+        <form id="foundForm" style="display:none;">
+            <input type="text" placeholder="Item Name" required>
+            <input type="text" placeholder="Event Name (where item was found)" required>
+            <input type="tel" placeholder="Your Contact Number" required>
+            <div class="reminder">
+                ⚠ Item can only be claimed if correct identifying characteristics are provided.
+            </div>
+
+            <button class="submit-btn" type="submit">Submit Found Report</button>
+        </form>
+
+        <!-- GRID VIEW BUTTON -->
+        <button class="grid-btn" onclick="location.href='/book-resources'">View All Lost & Found Items</button>
+    </div>
+
+    <script src="/scripts/lost-found.js"></script>
+    <script src="/scripts/load-navbar.js"></script>
+    <script src="/scripts/auth-guard.js"></script>
+</body>
+
+</html>

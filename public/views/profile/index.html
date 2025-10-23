@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Upload</title>
+  <link rel="stylesheet" href="/styles/profile.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+  <div class="container">
+    <div class="profile-upload">
+      <label for="fileInput" class="upload-label" id="uploadLabel">
+        Upload Photo
+      </label>
+      <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+    </div>
+
+    <div class="details">
+      <div class="detail-field">
+        <label for="name">Name:</label>
+        <div class="text-box" id="name">test</div>
+      </div>
+      <div class="detail-field">
+        <label for="email">Email:</label>
+        <div class="text-box" id="email">test@gmail.com</div>
+      </div>
+      <div class="detail-field">
+        <label for="phone">Phone:</label>
+        <div class="text-box" id="phone">12345678</div>
+      </div>
+    </div>
+    <script src="/scripts/profile.js"></script>
+    <script src="/scripts/load-navbar.js"></script>
+    <script src="/scripts/auth-guard.js"></script>
+    <a href="javascript:history.back()" class="back-btn">&#8592; </a>
+</body>
+</html>

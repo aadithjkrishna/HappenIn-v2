@@ -1,0 +1,140 @@
+Project Structure 
+
+ROOT_DIRECTORY
+
+// MongoDB Schemas
+models/
+    Event.js
+    User.js
+
+// Node Modules
+node_modules/
+
+// Static files and Websites
+public/
+    resources/
+        background/
+            9.jpg
+            background.png
+            home-background.png
+        images/
+            female_placeholder.jpg
+            male_placeholder.jpg
+    scripts/
+        about.js            -> Does nothing now
+        book-resources.js   -> Work in Progress
+        calendar.js         -> Looks at the events from the database and displays it on the calendar
+        event-register.js   -> Sends the form data from the front-end to the backend
+        faculty.js          -> Does nothing as of now
+        forgot-password.js  -> Handles the email-authentication and otp-verification if user forgot their password
+        home.js             -> Checks the browser for if past login is present and routes accordingly
+        login.js            -> Sends the form data of login details to the back-end and routes to the home page
+        lost-found.js       -> Work in Progress
+        profile.js          -> Does nothing
+        signup.js           -> Sends the form data when a new user comes and registers their account details. It sends form data to back-end
+    styles/
+        about.css
+        book-resources.css
+        calendar.css
+        error.css
+        event-register.css
+        faculty.css
+        forgot-password.css
+        global.css
+        home.css
+        login.css
+        lost-found.css
+        profile.css
+        signup.css
+    views/
+        about/index.html
+        book-resources/index.html
+        calendar/index.html
+        error404/index.html
+        event-register/index.html
+        faculty/index.html
+        forgot-password/index.html
+        home/index.html
+        login/index.html
+        lost-found/index.html
+        mini-games/index.html
+        profile/index.html
+        signup/index.html
+
+// Handling User Registration, Login, Event Registration backend
+routes/
+    auth.js     -> Handles Sign-Up, Login, Send-OTP, Verify-OTP, Reset-password
+    events.js   -> Registers events and get data for Booked dates from database for calendar
+    profile.js  -> Profile page needs Username, Phone No, and E-Mail
+
+// For storing sensitive information like Mongo_API_Key => MONGO_URI, E-Mail for sending OTP etc..
+.env
+
+// Node modules used and commands
+package.json
+
+// Handles Routing of pages, Connection with mongodb etc..
+server.js
+
+Structure
+
+models/
+    Event.js
+    User.js
+node_modules/
+public/
+    resources/
+        background/
+            9.jpg
+            background.png
+            home-background.png
+        images/
+            female_placeholder.jpg
+            male_placeholder.jpg
+    scripts/
+        about.js
+        book-resources.js
+        calendar.js
+        event-register.js
+        faculty.js
+        forgot-password.js
+        home.js
+        login.js
+        lost-found.js
+        profile.js
+        signup.js
+    styles/
+        about.css
+        book-resources.css
+        calendar.css
+        error.css
+        event-register.css
+        faculty.css
+        forgot-password.css
+        global.css
+        home.css
+        login.css
+        lost-found.css
+        profile.css
+        signup.css
+    views/
+        about/index.html
+        book-resources/index.html
+        calendar/index.html
+        error404/index.html
+        event-register/index.html
+        faculty/index.html
+        forgot-password/index.html
+        home/index.html
+        login/index.html
+        lost-found/index.html
+        mini-games/index.html
+        profile/index.html
+        signup/index.html
+routes/
+    auth.js
+    events.js
+    profile.js
+.env
+package.json
+server.js

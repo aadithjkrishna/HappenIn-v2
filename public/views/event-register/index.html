@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="/styles/event-register.css">
+    <link rel="stylesheet" href="/styles/global.css"/>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="wrapper">
+        <div class="form-container">
+            <div class="form-header">
+                <span>Event Registration</span>
+            </div>
+            <form id="eventForm">
+                <div class="input-container">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder=" " required>
+                        <label class="label">Event Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="date" class="input-field" required>
+                        <label class="label">Event Date</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="time" class="input-field" required>
+                        <label class="label">Start Time</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="time" class="input-field" required>
+                        <label class="label">End Time</label>
+                    </div>
+                    <div class="input-box">
+                        <select class="input-field" required>
+                            <option value="" disabled selected>Select Venue</option>
+                            <option value="Hall A">Hall A</option>
+                            <option value="Hall B">Hall B</option>
+                            <option value="Hall C">Hall C</option>
+                        </select>
+                        <label class="label">Venue</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" required>
+                        <label class="label">Organizer Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" class="input-field" required>
+                        <label class="label">Organizer Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" class="input-field" required>
+                        <label class="label">Number of Participants</label>
+                    </div>
+                    <div class="input-box full-width">
+                        <textarea class="input-field" required></textarea>
+                        <label class="label">Event Description</label>
+                    </div>
+                    <div class="input-box full-width">
+                        <label class="radio-label">Event Type:</label>
+                        <select class="input-field">
+                            <option value="Seminar">Seminar</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Competition">Competition</option>
+                            <option value="Cultural">Cultural</option>
+                        </select>
+                    </div>
+                    <div class="input-box full-width">
+                        <input type="url" class="input-field">
+                        <label class="label">Registration Link (Optional)</label>
+                    </div>
+                    <div class="input-box full-width">
+                        <textarea class="input-field"></textarea>
+                        <label class="label">Special Requirements</label>
+                    </div>
+                    <div class="input-box full-width">
+                        <label class="radio-label">Need Power Backup?</label>
+                        <input type="radio" name="powerBackup" value="yes" onclick="showPayment()"> Yes
+                        <input type="radio" name="powerBackup" value="no" onclick="hidePayment()"> No
+                    </div>
+                    <div class="input-box full-width" id="paymentField" style="display: none;">
+                        <input type="number" class="input-field" placeholder=" ">
+                        <label class="label">Power Backup Fee</label>
+                    </div>
+                </div>
+                <div class="input-box full-width">
+                    <button type="submit" class="submit-btn">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showPayment() {
+            document.getElementById('paymentField').style.display = 'block';
+        }
+        function hidePayment() {
+            document.getElementById('paymentField').style.display = 'none';
+        }
+    </script>
+    <script src="/scripts/event-register.js" defer></script>
+    <script src="/scripts/load-navbar.js"></script>
+    <script src="/scripts/auth-guard.js"></script>
+    <a href="javascript:history.back()" class="back-btn">&#8592; </a>
+</body>
+</html>

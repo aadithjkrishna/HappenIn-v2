@@ -1,0 +1,60 @@
+/* Glassmorphic Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+nav .logo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.8rem;
+  cursor: pointer; /* added */
+}
+
+nav .links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav .links a,
+nav .links div {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer; /* added */
+}
+
+nav .links a:hover,
+nav .links div:hover {
+  color: #ffd700;
+}
+
+nav .auth-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+nav .auth-buttons button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer; /* already exists */
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+nav .auth-buttons button:hover {
+  background: rgba(255, 215, 0, 0.8);
+}

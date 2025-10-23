@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="/styles/forgot-password.css">
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="LoginAndRegistrationForm">
+            <h1 id="formTitle">Reset Password</h1>
+
+            <div id="ResetPasswordForm">
+                <form id="passwordResetForm">
+
+                    <!-- Step 1: Enter Email -->
+                    <div id="emailStep">
+                        <input id="email" class="input-text" type="email" placeholder="Enter your email">
+                        <button type="button" onclick="sendOTP()">Send OTP</button>
+                    </div>
+
+                    <!-- Step 2: Enter OTP -->
+                    <div id="otpStep" style="display: none;">
+                        <input id="otp" class="input-text" type="text" placeholder="Enter OTP">
+                        <button type="button" onclick="verifyOTP()">Verify OTP</button>
+                    </div>
+
+                    <!-- Step 3: Reset Password -->
+                    <div id="passwordStep" style="display: none;">
+                        <input id="NewPassword" class="input-text" type="password" placeholder="New Password">
+                        <input id="ConfirmNewPassword" class="input-text" type="password"
+                            placeholder="Confirm Password">
+                        <button type="button" onclick="resetPassword()">Change Password</button>
+                    </div>
+
+                </form>
+
+                <p class="center mt-20 already-have-account">
+                    Back to the <a href="/login">Login page</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/forgot-password.js"></script>
+</body>
+
+</html>

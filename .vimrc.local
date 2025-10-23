@@ -1,0 +1,1 @@
+nnoremap <F5> :tabnew | !npm run dev | read<CR>

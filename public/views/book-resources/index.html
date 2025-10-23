@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Resource Management</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/book-resources.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <h1>College Event Resources</h1>
+    <div class="grid" id="resourceGrid"></div>
+
+    <!-- Popup -->
+    <div id="popupForm" class="popup">
+  <form id="bookingForm" class="popup-content">
+    <h2>Book Resource</h2>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" required>
+
+    <label for="faculty">Faculty</label>
+    <input type="text" id="faculty" required>
+
+    <label for="event">Event</label>
+    <input type="text" id="event" required>
+
+    <label for="dateFrom">Date From</label>
+    <input type="date" id="dateFrom" required>
+
+    <label for="dateTo">Date To</label>
+    <input type="date" id="dateTo" required>
+
+    <label for="contact">Contact</label>
+    <input type="text" id="contact" required>
+
+    <label for="remarks">Remarks</label>
+    <textarea id="remarks"></textarea>
+
+    <!-- NEW: show available quantity -->
+    <div id="availableInfo"></div>
+
+    <!-- NEW: quantity input -->
+    <label for="quantity">Quantity to Book</label>
+    <input type="number" id="quantity" min="1" required>
+
+    <button type="submit">Submit Booking</button>
+    <button type="button" onclick="closePopup()">Cancel</button>
+  </form>
+</div>
+
+
+    <script src="/scripts/book-resources.js"></script>
+    <script src="/scripts/load-navbar.js"></script>
+    <script src="/scripts/auth-guard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Event Calendar</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/calendar.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="calendar-container">
+        <div class="header">
+            <button onclick="prevMonth()">◀</button>
+            <h2 id="monthYear"></h2>
+            <button onclick="nextMonth()">▶</button>
+        </div>
+        <div class="calendar" id="calendar"></div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <h3 id="eventTitle"></h3>
+        <p id="eventDetails"></p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+    <script src="/scripts/calendar.js"></script>
+    <script src="/scripts/load-navbar.js"></script>
+    <script src="/scripts/auth-guard.js"></script>
+    <a href="javascript:history.back()" class="back-btn">&#8592; </a>
+</body>
+
+</html>
