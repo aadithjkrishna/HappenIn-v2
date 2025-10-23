@@ -8,6 +8,7 @@ const Game = () => {
     <div>
       <NavBar />
       <h1>Mini Game</h1>
+      <GameCanvas width={800} height={600} />
     </div>
   );
 };
